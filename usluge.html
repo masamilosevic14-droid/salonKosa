@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Usluge — Studio Kosa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="./i18n.js"></script>
+<script src="./prelaz.js"></script>
+<script src="./meni.js"></script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:#F5F1EA;color:#1C1815;font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1C1815;text-decoration:none}
+a:hover{color:#6E5A48}
+input,select,button{font-family:inherit}
+</style>
+<style>@keyframes puls{0%{box-shadow:0 0 0 0 rgba(28,24,21,.45);transform:scale(1)}50%{transform:scale(1.04)}70%{box-shadow:0 0 0 16px rgba(28,24,21,0)}100%{box-shadow:0 0 0 0 rgba(28,24,21,0);transform:scale(1)}}</style><style>html,body,body *{cursor:url("assets/kursor.png") 15 20, auto !important}a,a *,button,button *,[role=button],label,summary{cursor:url("assets/kursor.png") 15 20, pointer !important}</style></helmet>
+<div style="min-height:100vh;background:#F5F1EA">
+  <nav style="position:sticky;top:0;z-index:50;background:#F5F1EA;border-top:1px solid #1C1815;border-bottom:1px solid rgba(28,24,21,.12);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:18px clamp(16px,3vw,40px)">
+      <div style="display:flex;gap:clamp(14px,2.4vw,36px);flex-wrap:wrap;font-size:13px;letter-spacing:.14em;text-transform:uppercase">
+        <a href="index.html#o-nama">O nama</a>
+        <a href="galerija.html" style="color:#8A6A4C;font-weight:500" style-hover="color:#1C1815">Galerija</a>
+        <a href="nega.html">Nega kose</a>
+        <a href="usluge.html">Usluge</a>
+      </div>
+      <a href="index.html" style="display:block;line-height:0"><img src="assets/logo.png" alt="Studio Kosa" style="height:56px;width:auto"></a>
+      <div style="display:flex;gap:clamp(14px,2.4vw,36px);flex-wrap:wrap;justify-content:flex-end;align-items:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase">
+        <a href="index.html#rezervisi" style="animation:puls 2.2s ease-out infinite;background:#D2BDA6;padding:11px 22px;color:#1C1815" style-hover="background:#1C1815;color:#F5F1EA">Rezerviši</a>
+        <div style="display:flex;gap:6px;align-items:center;font-size:12px;letter-spacing:.12em"><button type="button" data-lang="sr" aria-label="Srpski" style="background:transparent;border:0;padding:6px 2px;font:inherit;letter-spacing:inherit;color:#1C1815;cursor:pointer">SR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-label="English" style="background:transparent;border:0;padding:6px 2px;font:inherit;letter-spacing:inherit;color:#1C1815;cursor:pointer">EN</button></div>
+      </div>
+    </nav>
+  <header data-screen-label="Usluge — zaglavlje">
+    
+  </header>
+  <main style="padding:0 clamp(16px,3vw,40px)">
+    <div data-screen-label="Usluge" style="padding:clamp(56px,8vw,120px) 0 clamp(40px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px;align-items:end">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;margin-bottom:6px">[ Cenovnik ]</div>
+        <h1 style="margin:0;font-weight:500;font-size:clamp(44px,7vw,110px);letter-spacing:.03em;line-height:.95">USLUGE</h1>
+      </div>
+      <p style="margin:0;max-width:440px;justify-self:end;font-size:16px;line-height:1.7;font-weight:300;text-wrap:pretty">Cene zavise od dužine i gustine kose. Konačnu cenu dogovaramo na konsultaciji pre početka tretmana.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,96px);align-items:flex-start;padding-bottom:clamp(48px,6vw,88px)">
+    <nav aria-label="Kategorije usluga" style="position:sticky;top:24px;display:flex;flex-direction:column;gap:clamp(28px,4vw,52px);padding-top:clamp(32px,4vw,56px);flex:1 1 220px;max-width:320px">
+      <a href="#sisanje" style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:8px 8px 12px;border-bottom:1px solid transparent;color:#5E554C" style-hover="border-bottom:1px solid #1C1815;color:#1C1815"><img src="assets/icon-dryer.png" alt="" style="height:64px;width:auto"><span style="font-size:clamp(13px,1.2vw,15px);font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-align:center">Kosa &amp; stilizovanje</span></a>
+      <a href="#bojenje" style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:8px 8px 12px;border-bottom:1px solid transparent;color:#5E554C" style-hover="border-bottom:1px solid #1C1815;color:#1C1815"><img src="assets/icon-products.png" alt="" style="height:64px;width:auto"><span style="font-size:clamp(13px,1.2vw,15px);font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-align:center">Boja &amp; tretmani</span></a>
+      <a href="#sminka" style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:8px 8px 12px;border-bottom:1px solid transparent;color:#5E554C" style-hover="border-bottom:1px solid #1C1815;color:#1C1815"><img src="assets/icon-makeup.png" alt="" style="height:64px;width:auto"><span style="font-size:clamp(13px,1.2vw,15px);font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-align:center">Punđe / šminka</span></a>
+    </nav>
+    <div style="display:flex;flex-direction:column;flex:999 1 480px;min-width:0">
+    <article id="sisanje" style="scroll-margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(20px,4vw,56px);padding:clamp(36px,4.5vw,64px) 0;border-top:1px solid #1C1815">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:13px;letter-spacing:.1em">[01]</div>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:.03em;line-height:1.05;text-transform:uppercase">Šišanje</h2>
+      </div>
+      <div style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Žensko šišanje</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 1.800 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Šišanje i feniranje</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 2.500 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Šišanje šiški</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">600 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Muško šišanje</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">1.200 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Dečije šišanje</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">900 RSD</span></div></div>
+    </article>
+    <article id="feniranje" style="scroll-margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(20px,4vw,56px);padding:clamp(36px,4.5vw,64px) 0;border-top:1px solid #1C1815">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:13px;letter-spacing:.1em">[02]</div>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:.03em;line-height:1.05;text-transform:uppercase">Feniranje i stilizovanje</h2>
+      </div>
+      <div style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Feniranje — kratka kosa</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">1.200 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Feniranje — srednja kosa</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">1.500 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Feniranje — duga kosa</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">1.900 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Lokne / talasi</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 2.000 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Svečana frizura</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 3.500 RSD</span></div></div>
+    </article>
+    <article id="bojenje" style="scroll-margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(20px,4vw,56px);padding:clamp(36px,4.5vw,64px) 0;border-top:1px solid #1C1815">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:13px;letter-spacing:.1em">[03]</div>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:.03em;line-height:1.05;text-transform:uppercase">Bojenje</h2>
+      </div>
+      <div style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Farbanje izrasta</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 3.000 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Farbanje cele dužine</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 4.500 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Balayage</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 9.000 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Pramenovi</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 6.000 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Toniranje</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 2.500 RSD</span></div></div>
+    </article>
+    <article id="nega" style="scroll-margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(20px,4vw,56px);padding:clamp(36px,4.5vw,64px) 0;border-top:1px solid #1C1815">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:13px;letter-spacing:.1em">[04]</div>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:.03em;line-height:1.05;text-transform:uppercase">Nega kose</h2>
+      </div>
+      <div style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Dubinska maska</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">1.200 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Keratinski tretman</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 7.000 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Olaplex tretman</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 2.500 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Masaža vlasišta</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">800 RSD</span></div></div>
+    </article>
+    <article id="sminka" style="scroll-margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(20px,4vw,56px);padding:clamp(36px,4.5vw,64px) 0;border-top:1px solid #1C1815">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:13px;letter-spacing:.1em">[05]</div>
+        <h2 style="margin:0;font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:.03em;line-height:1.05;text-transform:uppercase">Punđe i šminka</h2>
+      </div>
+      <div style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Svečana punđa</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 3.500 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Dnevna šminka</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">2.500 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Večernja šminka</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">3.500 RSD</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #CFC6B8"><span style="font-size:17px;font-weight:300">Mladenački paket — frizura i šminka</span><span style="font-size:15px;letter-spacing:.04em;white-space:nowrap">od 9.000 RSD</span></div></div>
+    </article>
+    </div>
+    </div>
+  </main>
+  <section style="background:#D2BDA6;padding:clamp(56px,7vw,100px) clamp(16px,3vw,40px);display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px">[ Vidimo se u salonu ]</div>
+    <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,54px);letter-spacing:.03em;line-height:1">ZAKAŽITE SVOJ TERMIN</h2>
+    <a href="index.html#rezervisi" style="animation:puls 2.2s ease-out infinite;margin-top:8px;background:#1C1815;color:#F5F1EA;padding:16px 36px;font-size:13px;letter-spacing:.16em;text-transform:uppercase" style-hover="background:#F5F1EA;color:#1C1815">Rezerviši</a>
+  </section>
+  <footer style="padding:56px clamp(16px,3vw,40px);display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
+    <img src="assets/logo.png" alt="Studio Kosa" style="height:110px;width:auto">
+    <div style="font-size:12px;letter-spacing:.14em;color:#4A4038">VALENTINA VODNIKA 8 · NOVI SAD</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

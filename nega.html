@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Nega kose — Studio Kosa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<script src="./i18n.js"></script>
+<script src="./prelaz.js"></script>
+<script src="./meni.js"></script>
+<style>
+body{margin:0;background:#F5F1EA;color:#1C1815;font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1C1815;text-decoration:none}
+a:hover{color:#6E5A48}
+button{font-family:inherit}
+@keyframes puls{0%{box-shadow:0 0 0 0 rgba(28,24,21,.45);transform:scale(1)}50%{transform:scale(1.04)}70%{box-shadow:0 0 0 16px rgba(28,24,21,0)}100%{box-shadow:0 0 0 0 rgba(28,24,21,0);transform:scale(1)}}
+@keyframes kisa{from{top:-60px}to{top:100%}}
+html,body,body *{cursor:url("assets/kursor.png") 15 20, auto !important}a,a *,button,button *,[role=button],label,summary{cursor:url("assets/kursor.png") 15 20, pointer !important}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#F5F1EA">
+  <nav style="position:sticky;top:0;z-index:50;background:#F5F1EA;border-top:1px solid #1C1815;border-bottom:1px solid rgba(28,24,21,.12);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:18px clamp(16px,3vw,40px)">
+    <div style="display:flex;gap:clamp(14px,2.4vw,36px);flex-wrap:wrap;font-size:13px;letter-spacing:.14em;text-transform:uppercase">
+      <a href="index.html#o-nama">O nama</a>
+      <a href="galerija.html" style="color:#8A6A4C;font-weight:500" style-hover="color:#1C1815">Galerija</a>
+      <a href="nega.html" style="border-bottom:1px solid #1C1815">Nega kose</a>
+      <a href="usluge.html">Usluge</a>
+    </div>
+    <a href="index.html" style="display:block;line-height:0"><img src="assets/logo.png" alt="Studio Kosa" style="height:56px;width:auto"></a>
+    <div style="display:flex;gap:clamp(14px,2.4vw,36px);flex-wrap:wrap;justify-content:flex-end;align-items:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase">
+      <a href="index.html#rezervisi" style="animation:puls 2.2s ease-out infinite;background:#D2BDA6;padding:11px 22px;color:#1C1815" style-hover="background:#1C1815;color:#F5F1EA">Rezerviši</a>
+      <div style="display:flex;gap:6px;align-items:center;font-size:12px;letter-spacing:.12em"><button type="button" data-lang="sr" aria-label="Srpski" style="background:transparent;border:0;padding:6px 2px;font:inherit;letter-spacing:inherit;color:#1C1815;cursor:pointer">SR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-label="English" style="background:transparent;border:0;padding:6px 2px;font:inherit;letter-spacing:inherit;color:#1C1815;cursor:pointer">EN</button></div>
+    </div>
+  </nav>
+
+  <section data-screen-label="Nega kose" ref="{{ secRef }}" style="position:relative;overflow:hidden;background:#FBF8F3;color:#1C1815;padding:clamp(88px,11vw,170px) clamp(16px,3vw,40px) clamp(80px,9vw,140px)">
+    <div role="img" aria-label="Kérastase, Olaplex, L’Oréal Professionnel, Matrix" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:.32">{{ kisa }}</div>
+    
+
+    <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center">
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:#8A6A4C">[ Zašto je nega važna ]</div>
+      <h1 style="margin:0;display:flex;align-items:baseline;justify-content:center;font-weight:300;font-size:clamp(44px,7vw,108px);letter-spacing:.06em;line-height:.9"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.7em;line-height:.6;margin-right:-.04em;color:#B29374">N</span><span>EGA KOSE</span></h1>
+      <p style="margin:0;max-width:520px;font-size:16px;line-height:1.75;font-weight:300;color:#5E554C;text-wrap:pretty">Šišanje i boja traju onoliko koliko kosu negujete između dva termina. Tri koraka koja preporučujemo svakoj klijentkinji:</p>
+    </div>
+
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <div style="position:relative;max-width:1040px;height:860px;margin:clamp(56px,6vw,96px) auto 0">
+        <svg aria-hidden="true" width="662" height="662" viewBox="0 0 662 662" style="position:absolute;left:50%;top:149px;margin-left:-331px;overflow:visible;transform:scaleX(-1) rotate(-90deg)"><circle cx="331" cy="331" r="330" fill="none" stroke="#CFB9A1" stroke-width="1" stroke-dasharray="2074" stroke-dashoffset="{{ circleOff }}" style="transition:stroke-dashoffset 3.2s cubic-bezier(.45,.05,.35,1) .3s"></circle></svg>
+        <div style="opacity:{{ op }};transform:translateY({{ ty }});transition:opacity 1.1s ease 0s,transform 1.1s ease 0s;position:absolute;left:50%;top:0;width:400px;margin-left:-200px;padding:24px 20px 28px;background:#FBF8F3;box-sizing:border-box;text-align:center">
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:18px"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;font-weight:300;color:#B29374">01.</span><span style="font-size:17px;font-weight:400;letter-spacing:.2em">ČIŠĆENJE</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.8;font-weight:300;color:#5E554C;text-wrap:pretty">Blag šampon prilagođen vlasištu uklanja nečistoće bez isušivanja. Zdravo vlasište je temelj jake i sjajne kose, zato ga perite nežno i ispirajte mlakom vodom.</p>
+        </div>
+        <div style="opacity:{{ op }};transform:translateY({{ ty }});transition:opacity 1.1s ease 1.1s,transform 1.1s ease 1.1s;position:absolute;left:0;top:400px;width:360px;padding:24px 20px 28px 0;background:#FBF8F3;box-sizing:border-box">
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:18px"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;font-weight:300;color:#B29374">02.</span><span style="font-size:17px;font-weight:400;letter-spacing:.2em">HRANJENJE</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.8;font-weight:300;color:#5E554C;text-wrap:pretty">Maske i regeneratori vraćaju vlagu i proteine koje kosa gubi bojenjem, feniranjem i suncem. Jednom nedeljno dubinska maska čini kosu mekšom i otpornijom.</p>
+        </div>
+        <div style="opacity:{{ op }};transform:translateY({{ ty }});transition:opacity 1.1s ease 2.5s,transform 1.1s ease 2.5s;position:absolute;right:0;top:400px;width:360px;padding:24px 0 28px 20px;background:#FBF8F3;box-sizing:border-box;text-align:right">
+          <div style="display:flex;align-items:baseline;justify-content:flex-end;gap:12px;margin-bottom:18px"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;font-weight:300;color:#B29374">03.</span><span style="font-size:17px;font-weight:400;letter-spacing:.2em">ZAŠTITA</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.8;font-weight:300;color:#5E554C;text-wrap:pretty">Termo zaštita pre feniranja, redovno skraćivanje vrhova i svilena jastučnica čuvaju dužinu. Tako boja duže traje, a frizura ostaje uredna između dva termina.</p>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <div style="position:relative;display:flex;flex-direction:column;gap:40px;max-width:520px;margin:56px auto 0">
+        <div style="opacity:{{ op }};transform:translateY({{ ty }});transition:opacity 1.1s ease 0s,transform 1.1s ease 0s;display:flex;flex-direction:column;gap:14px;padding-top:28px;border-top:1px solid #CFB9A1">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;font-weight:300;color:#B29374">01.</span><span style="font-size:17px;font-weight:400;letter-spacing:.2em">ČIŠĆENJE</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.8;font-weight:300;color:#5E554C">Blag šampon prilagođen vlasištu uklanja nečistoće bez isušivanja. Zdravo vlasište je temelj jake i sjajne kose, zato ga perite nežno i ispirajte mlakom vodom.</p>
+        </div>
+        <div style="opacity:{{ op }};transform:translateY({{ ty }});transition:opacity 1.1s ease 0.5s,transform 1.1s ease 0.5s;display:flex;flex-direction:column;gap:14px;padding-top:28px;border-top:1px solid #CFB9A1">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;font-weight:300;color:#B29374">02.</span><span style="font-size:17px;font-weight:400;letter-spacing:.2em">HRANJENJE</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.8;font-weight:300;color:#5E554C">Maske i regeneratori vraćaju vlagu i proteine koje kosa gubi bojenjem, feniranjem i suncem. Jednom nedeljno dubinska maska čini kosu mekšom i otpornijom.</p>
+        </div>
+        <div style="opacity:{{ op }};transform:translateY({{ ty }});transition:opacity 1.1s ease 1s,transform 1.1s ease 1s;display:flex;flex-direction:column;gap:14px;padding-top:28px;border-top:1px solid #CFB9A1">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;font-weight:300;color:#B29374">03.</span><span style="font-size:17px;font-weight:400;letter-spacing:.2em">ZAŠTITA</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.8;font-weight:300;color:#5E554C">Termo zaštita pre feniranja, redovno skraćivanje vrhova i svilena jastučnica čuvaju dužinu. Tako boja duže traje, a frizura ostaje uredna između dva termina.</p>
+        </div>
+      </div>
+    </sc-if>
+
+    <div style="opacity:{{ op }};transform:translateY({{ ty }});transition:opacity 1.1s ease 3.4s,transform 1.1s ease 3.4s;position:relative;display:flex;justify-content:center;margin-top:clamp(48px,5vw,72px)">
+      <a href="usluge.html#nega" style="display:flex;flex-direction:column;align-items:center;gap:14px;color:#1C1815;font-size:12px;letter-spacing:.2em;text-transform:uppercase" style-hover="color:#8A6A4C">
+        <span>Tretmani nege u salonu</span>
+        <svg width="64" height="28" viewBox="0 0 64 28" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M0 14h62M49 1l13 13-13 13"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <section style="background:#D2BDA6;padding:clamp(56px,7vw,100px) clamp(16px,3vw,40px);display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px">[ Vidimo se u salonu ]</div>
+    <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,54px);letter-spacing:.03em;line-height:1">ZAKAŽITE SVOJ TERMIN</h2>
+    <a href="index.html#rezervisi" style="animation:puls 2.2s ease-out infinite;margin-top:8px;background:#1C1815;color:#F5F1EA;padding:16px 36px;font-size:13px;letter-spacing:.16em;text-transform:uppercase" style-hover="background:#F5F1EA;color:#1C1815">Rezerviši</a>
+  </section>
+  <footer style="padding:56px clamp(16px,3vw,40px);display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
+    <img src="assets/logo.png" alt="Studio Kosa" style="height:110px;width:auto">
+    <div style="font-size:12px;letter-spacing:.14em;color:#4A4038">VALENTINA VODNIKA 8 · NOVI SAD</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1200, vis: false };
+  secRef = React.createRef();
+  componentDidMount() {
+    this._r = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this._r);
+    const el = this.secRef.current;
+    if (!el || !('IntersectionObserver' in window)) return this.setState({ vis: true });
+    this._io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { this.setState({ vis: true }); this._io.disconnect(); } }, { threshold: 0.25 });
+    this._io.observe(el);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._r); this._io && this._io.disconnect(); }
+  kisa() {
+    const N = Math.max(2, Math.min(7, Math.floor(this.state.w / 230)));
+    if (this._kisa && this._kisaN === N) return this._kisa;
+    const B = ['Kérastase', 'Olaplex', 'L’Oréal Professionnel', 'Matrix'];
+    const e = React.createElement, out = [];
+    for (let lane = 0; lane < N; lane++) {
+      const dur = 20 + (lane % 3) * 3;
+      for (let k = 0; k < 3; k++) {
+        const i = lane * 3 + k, name = B[(lane + k * 3) % 4], long = name.length > 12;
+        const script = long || (lane + k) % 2 === 1;
+        const size = script ? (long ? 24 : 32) : 15;
+        out.push(e('div', { key: N + '-' + i, 'aria-hidden': 'true', style: {
+          position: 'absolute', top: '-60px', left: ((lane + 0.5) / N * 100) + '%', translate: '-50% 0',
+                    animation: 'kisa ' + dur + 's linear ' + (-(k / 3 + lane * 0.17) * dur).toFixed(2) + 's infinite',
+          whiteSpace: 'nowrap', fontFamily: script ? "'Cormorant Garamond',serif" : "'Jost',sans-serif",
+          fontStyle: script ? 'italic' : 'normal', fontWeight: script ? 300 : 400, fontSize: size + 'px',
+          letterSpacing: script ? '.01em' : '.22em', textTransform: script ? 'none' : 'uppercase',
+          color: i % 2 ? '#1C1815' : '#8A6A4C'
+        } }, name));
+      }
+    }
+    this._kisaN = N;
+    return (this._kisa = out);
+  }
+  renderVals() {
+    const wide = this.state.w >= 1000, v = this.state.vis;
+    return { kisa: this.kisa(), wide, narrow: !wide, secRef: this.secRef, circleOff: v ? 0 : 2074, op: v ? 1 : 0, ty: v ? '0px' : '14px' };
+  }
+}
+</script>
+</body>
+</html>

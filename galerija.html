@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Galerija — Studio Kosa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="./i18n.js"></script>
+<script src="./prelaz.js"></script>
+<script src="./meni.js"></script>
+<script src="./galerija-lightbox.js"></script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:#F5F1EA;color:#1C1815;font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1C1815;text-decoration:none}
+a:hover{color:#6E5A48}
+input,select,button{font-family:inherit}
+</style>
+<style>@keyframes puls{0%{box-shadow:0 0 0 0 rgba(28,24,21,.45);transform:scale(1)}50%{transform:scale(1.04)}70%{box-shadow:0 0 0 16px rgba(28,24,21,0)}100%{box-shadow:0 0 0 0 rgba(28,24,21,0);transform:scale(1)}}</style><style>html,body,body *{cursor:url("assets/kursor.png") 15 20, auto !important}a,a *,button,button *,[role=button],label,summary{cursor:url("assets/kursor.png") 15 20, pointer !important}</style></helmet>
+<div style="min-height:100vh;background:#F5F1EA">
+  <nav style="position:sticky;top:0;z-index:50;background:#F5F1EA;border-top:1px solid #1C1815;border-bottom:1px solid rgba(28,24,21,.12);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:18px clamp(16px,3vw,40px)">
+      <div style="display:flex;gap:clamp(14px,2.4vw,36px);flex-wrap:wrap;font-size:13px;letter-spacing:.14em;text-transform:uppercase">
+        <a href="index.html#o-nama">O nama</a>
+        <a href="galerija.html" style="color:#8A6A4C;font-weight:500" style-hover="color:#1C1815">Galerija</a>
+        <a href="nega.html">Nega kose</a>
+        <a href="usluge.html">Usluge</a>
+      </div>
+      <a href="index.html" style="display:block;line-height:0"><img src="assets/logo.png" alt="Studio Kosa" style="height:56px;width:auto"></a>
+      <div style="display:flex;gap:clamp(14px,2.4vw,36px);flex-wrap:wrap;justify-content:flex-end;align-items:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase">
+        <a href="index.html#rezervisi" style="animation:puls 2.2s ease-out infinite;background:#D2BDA6;padding:11px 22px;color:#1C1815" style-hover="background:#1C1815;color:#F5F1EA">Rezerviši</a>
+        <div style="display:flex;gap:6px;align-items:center;font-size:12px;letter-spacing:.12em"><button type="button" data-lang="sr" aria-label="Srpski" style="background:transparent;border:0;padding:6px 2px;font:inherit;letter-spacing:inherit;color:#1C1815;cursor:pointer">SR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-label="English" style="background:transparent;border:0;padding:6px 2px;font:inherit;letter-spacing:inherit;color:#1C1815;cursor:pointer">EN</button></div>
+      </div>
+    </nav>
+  <header data-screen-label="Galerija — zaglavlje">
+    
+  </header>
+  <main data-screen-label="Galerija" style="padding:clamp(56px,8vw,120px) clamp(16px,3vw,40px) clamp(72px,10vw,140px)">
+    <div style="margin-bottom:clamp(40px,5vw,72px)">
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;margin-bottom:6px">[ Naš rad ]</div>
+      <h1 style="margin:0;font-weight:500;font-size:clamp(44px,7vw,110px);letter-spacing:.03em;line-height:.95">GALERIJA</h1>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,40px);padding-top:10px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;cursor:zoom-in"><image-slot id="gal-1" shape="rect" src="assets/gal-1.jpg" placeholder="Fotografija iz salona"></image-slot></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[01]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;cursor:zoom-in"><image-slot id="gal-2" shape="rect" src="assets/gal-2.jpg" placeholder="Fotografija iz salona"></image-slot></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[02]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;cursor:zoom-in"><image-slot id="gal-3" shape="rect" src="assets/gal-3.jpg" placeholder="Fotografija iz salona"></image-slot></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[03]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;cursor:zoom-in"><image-slot id="gal-4" shape="rect" src="assets/gal-4.webp" placeholder="Fotografija iz salona"></image-slot></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[04]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;cursor:zoom-in"><image-slot id="gal-5" shape="rect" src="assets/gal-5.webp" placeholder="Fotografija iz salona"></image-slot></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[05]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;cursor:zoom-in"><image-slot id="gal-6" shape="rect" src="assets/gal-6.webp" placeholder="Fotografija iz salona"></image-slot></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[06]</figcaption>
+      </figure>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:16px;margin:clamp(56px,7vw,96px) 0 clamp(24px,3vw,40px);padding-top:clamp(28px,3vw,40px);border-top:1px solid #1C1815">
+      <h2 style="margin:0;font-weight:500;font-size:clamp(24px,2.6vw,36px);letter-spacing:.04em;line-height:1">PRE I POSLE</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,40px);padding-top:10px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;position:relative;cursor:zoom-in"><image-slot id="gal-7" shape="rect" src="assets/gal-7.webp" placeholder="Fotografija iz salona"></image-slot><span style="position:absolute;top:12px;left:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#F5F1EA;color:#1C1815">PRE</span><span style="position:absolute;top:12px;right:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#1C1815;color:#F5F1EA">POSLE</span></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[07]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;position:relative;cursor:zoom-in"><image-slot id="gal-8" shape="rect" src="assets/gal-8.webp" placeholder="Fotografija iz salona"></image-slot><span style="position:absolute;top:12px;left:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#F5F1EA;color:#1C1815">PRE</span><span style="position:absolute;top:12px;right:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#1C1815;color:#F5F1EA">POSLE</span></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[08]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;position:relative;cursor:zoom-in"><image-slot id="gal-9" shape="rect" src="assets/gal-9.webp" placeholder="Fotografija iz salona"></image-slot><span style="position:absolute;top:12px;left:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#F5F1EA;color:#1C1815">PRE</span><span style="position:absolute;top:12px;right:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#1C1815;color:#F5F1EA">POSLE</span></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[09]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;position:relative;cursor:zoom-in"><image-slot id="gal-10" shape="rect" src="assets/gal-10.webp" placeholder="Fotografija iz salona"></image-slot><span style="position:absolute;top:12px;left:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#F5F1EA;color:#1C1815">PRE</span><span style="position:absolute;top:12px;right:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#1C1815;color:#F5F1EA">POSLE</span></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[10]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;position:relative;cursor:zoom-in"><image-slot id="gal-11" shape="rect" src="assets/gal-11.webp" placeholder="Fotografija iz salona"></image-slot><span style="position:absolute;top:12px;left:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#F5F1EA;color:#1C1815">PRE</span><span style="position:absolute;top:12px;right:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#1C1815;color:#F5F1EA">POSLE</span></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[11]</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;background:#FBF8F3;padding:clamp(10px,1.2vw,14px);box-shadow:0 2px 6px rgba(28,24,21,.06),0 8px 24px rgba(28,24,21,.06);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-10px);box-shadow:0 10px 18px rgba(28,24,21,.10),0 28px 56px rgba(28,24,21,.16)">
+        <div style="aspect-ratio:4/5;position:relative;cursor:zoom-in"><image-slot id="gal-12" shape="rect" src="assets/gal-12.webp" placeholder="Fotografija iz salona"></image-slot><span style="position:absolute;top:12px;left:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#F5F1EA;color:#1C1815">PRE</span><span style="position:absolute;top:12px;right:12px;z-index:2;pointer-events:none;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.18em;background:#1C1815;color:#F5F1EA">POSLE</span></div>
+        <figcaption style="font-size:12px;letter-spacing:.14em;padding:2px 2px 4px">[12]</figcaption>
+      </figure>
+    </div>
+  </main>
+  <section style="background:#D2BDA6;padding:clamp(56px,7vw,100px) clamp(16px,3vw,40px);display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px">[ Vidimo se u salonu ]</div>
+    <h2 style="margin:0;font-weight:500;font-size:clamp(30px,4vw,54px);letter-spacing:.03em;line-height:1">ZAKAŽITE SVOJ TERMIN</h2>
+    <a href="index.html#rezervisi" style="animation:puls 2.2s ease-out infinite;margin-top:8px;background:#1C1815;color:#F5F1EA;padding:16px 36px;font-size:13px;letter-spacing:.16em;text-transform:uppercase" style-hover="background:#F5F1EA;color:#1C1815">Rezerviši</a>
+  </section>
+  <footer style="padding:56px clamp(16px,3vw,40px);display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
+    <img src="assets/logo.png" alt="Studio Kosa" style="height:110px;width:auto">
+    <div style="font-size:12px;letter-spacing:.14em;color:#4A4038">VALENTINA VODNIKA 8 · NOVI SAD</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>
