@@ -7,8 +7,8 @@ html,body{overflow-x:clip}
   nav[data-meni]{grid-template-columns:auto 1fr!important;padding:10px 16px!important;gap:10px!important}
   nav[data-meni]>div:first-child{display:none!important}
   nav[data-meni]>a img{height:42px!important}
-  nav[data-meni]>div:last-child{gap:12px!important;flex-wrap:nowrap!important}
-  nav[data-meni]>div:last-child>a{padding:9px 14px!important;font-size:11px!important}
+  nav[data-meni]>[data-meni-desno]{gap:12px!important;flex-wrap:nowrap!important}
+  nav[data-meni]>[data-meni-desno]>a{padding:9px 12px!important;font-size:10px!important;letter-spacing:.12em!important;white-space:nowrap}
   [data-burger]{display:flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;padding:0 10px;margin-right:-10px;background:transparent;border:0;box-sizing:border-box}
   [data-burger] span{display:block;height:1px;background:#1C1815;transition:transform .3s,opacity .3s}
   nav[data-open] [data-burger] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -27,6 +27,7 @@ html,body{overflow-x:clip}
     if (cols.length < 3) return;
     const links = cols[0], right = cols[cols.length - 1];
     if (!nav.hasAttribute('data-meni')) nav.setAttribute('data-meni', '');
+    if (!right.hasAttribute('data-meni-desno')) right.setAttribute('data-meni-desno', '');
     if (!right.querySelector('[data-burger]')) {
       const b = document.createElement('button');
       b.type = 'button'; b.setAttribute('data-burger', ''); b.setAttribute('aria-label', 'Meni');
